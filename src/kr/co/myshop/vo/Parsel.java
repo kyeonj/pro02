@@ -1,24 +1,23 @@
 package kr.co.myshop.vo;
-
+//배송 클래스
 public class Parsel {
-	private int parselNo;
-	private String parselAdde;
-	private String cusTel;
-	private String parselCompany;
-	private String parselTel;
-	private int parselState;
-	
+	private int parselNo;	//배송코드
+	private String parselAddr;	//배송지
+	private String cusTel;		//고객연락처
+	private String parselCompany; //배송회사
+	private String parselTel;	//배송기사연락처
+	private int parselState;	//배송상태
 	public int getParselNo() {
 		return parselNo;
 	}
 	public void setParselNo(int parselNo) {
 		this.parselNo = parselNo;
 	}
-	public String getParselAdde() {
-		return parselAdde;
+	public String getParselAddr() {
+		return parselAddr;
 	}
-	public void setParselAdde(String parselAdde) {
-		this.parselAdde = parselAdde;
+	public void setParselAddr(String parselAddr) {
+		this.parselAddr = parselAddr;
 	}
 	public String getCusTel() {
 		return cusTel;
