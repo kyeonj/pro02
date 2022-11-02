@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<mete name=>
 <title>메인 페이지</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-latest.js"></script>

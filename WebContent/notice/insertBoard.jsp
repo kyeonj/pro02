@@ -19,36 +19,30 @@
 	Notice vo = (Notice) request.getAttribute("notice");
 %>
 <div class="content container">
-	<h2 class="title">공지사항 상세보기</h2>
+	<h2 class="title">공지사항 등록하기</h2>
+	<form name="frm1" id="frm1" action="../InsertBoardProCtrl" method="post">
 	<table class="table">
 		<tbody>
 			<tr>
-				<th>번호</th>
-				<td><%=vo.getNotiNo() %></td>
-			</tr>
-			<tr>
 				<th>제목</th>
-				<td><%=vo.getTitle() %></td>
+				<td><input type="text" name="title" id="title" placeholder="제목을 입력해주세요" class="form-control" autofocus required></td>
 			</tr>
 			<tr>
 				<th>내용</th>
-				<td><%=vo.getContent() %></td>
+				<td><textarea cols="80" rows="6" name="content" class="form-control" required></textarea></td>
 			</tr>
 			<tr>
 				<th>작성자</th>
-				<td><%=vo.getAuthor() %></td>
-			</tr>
-			<tr>
-				<th>작성일시</th>
-				<td><%=vo.getResDate() %></td>
+				<td><input type="text" name="author" id="author" value="admin" class="form-control" readonly></td>
 			</tr>
 		</tbody>
 	</table>
 	<div class="btn-group">
-		<a href="GetBoardListCtrl" class="btn btn-light">목록으로</a>
-		<a href="UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 수정</a>
-		<a href="DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 삭제</a>
+			<a href="../GetBoardListCtrl" class="btn btn-light">목록으로</a>
+			<input type="submit" name="submit-btn" class="btn btn-light" value="등록">
+			<input type="reset" name="reset-btn" class="btn btn-light" value="취소">
 	</div>
+	</form>
 </div>
 </body>
 </html>

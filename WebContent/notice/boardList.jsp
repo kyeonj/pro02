@@ -1,3 +1,4 @@
+<%@page import="java.text.SimpleDateFormat"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*, java.util.*, kr.co.myshop.vo.*"%>
@@ -11,6 +12,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+.table { text-align: center;}
 </style>
 </head>
 <body>
@@ -19,7 +21,7 @@
 	List<Notice> notiList = (ArrayList<Notice>) request.getAttribute("notiList");
 %>
 <div class="content container">
-	<h2 class="title">공지사항 목록</h2>
+	<h2 class="title">공지사항</h2>
 	<table class="table">
 		<thead>
 			<tr>
@@ -38,6 +40,9 @@
 		<% } %>	
 		</tbody>
 	</table>
+	<div class="btn-group">
+		<a href="./notice/insertBoard.jsp" class="btn btn-light">공지사항 등록</a>
+	</div>
 </div>
 </body>
 </html>
