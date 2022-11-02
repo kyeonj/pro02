@@ -11,6 +11,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+.table { text-align: center;}
 </style>
 </head>
 <body>
