@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <title>공지사항 목록</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
@@ -49,9 +50,11 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
-		<a href="GetBoardListCtrl" class="btn btn-light">목록으로</a>
-		<a href="UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 수정</a>
-		<a href="DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 삭제</a>
+		<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-light">목록으로</a>
+		<% if(sid.equals("admin")) { %>
+		<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 수정</a>
+		<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 삭제</a>
+		<% } %>
 	</div>
 </div>
 <%@ include file="../footer.jsp" %>

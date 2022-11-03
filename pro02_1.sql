@@ -20,6 +20,7 @@ create table notice(
     resDate datetime default now()
 );
 select * from notice;
+select * from custom;
 insert into notice(title,content, author) values("테스트제목1", "데스트1 내용입니다","admin");
 insert into notice(title,content, author) values("테스트제목2", "데스트2 내용입니다","admin");
 insert into notice(title,content, author) values("테스트제목3", "데스트3 내용입니다","admin");
