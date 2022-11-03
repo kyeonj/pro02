@@ -10,9 +10,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 .table { text-align: center;}
+.in_container { clear:both; width:1400px; margin:0 auto;  }
+.in_container:after { content:""; display:block; clear:both; }
 </style>
 </head>
 <body>
@@ -44,5 +47,6 @@
 		<a href="./notice/insertBoard.jsp" class="btn btn-light">공지사항 등록</a>
 	</div>
 </div>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>
