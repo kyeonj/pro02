@@ -12,8 +12,7 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
-.in_container { clear:both; width:1400px; margin:0 auto;  }
-.in_container:after { content:""; display:block; clear:both; }
+.btn-group {display:block; float: right;}
 </style>
 </head>
 <body>
@@ -21,7 +20,7 @@
 <%
 	Notice vo = (Notice) request.getAttribute("notice");
 %>
-<div class="content container">
+<div class="content container" id="content">
 	<h2 class="title">공지사항 수정</h2>
 	<form name="frm1" id="frm1" action="<%=request.getContextPath() %>/UpdateBoardProCtrl" method="post">
 	<table class="table">
@@ -41,9 +40,9 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
-			<input type="submit" name="submit-btn" class="btn btn-light" value="등록">
-			<input type="reset" name="reset-btn" class="btn btn-light" value="취소">
-			<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-light">목록으로</a>
+			<input type="submit" name="submit-btn" class="btn btn-secondary" value="등록">&nbsp;&nbsp;
+			<input type="reset" name="reset-btn" class="btn btn-secondary" value="취소">&nbsp;&nbsp;
+			<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-secondary">목록으로</a>&nbsp;&nbsp;
 	</div>
 	</form>
 </div>

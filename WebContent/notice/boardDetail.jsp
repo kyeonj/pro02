@@ -16,6 +16,7 @@
 .table { text-align: center;}
 .in_container { clear:both; width:1400px; margin:0 auto;  }
 .in_container:after { content:""; display:block; clear:both; }
+.btn-group {display:block; float: right;}
 </style>
 </head>
 <body>
@@ -23,7 +24,7 @@
 <%
 	Notice vo = (Notice) request.getAttribute("notice");
 %>
-<div class="content container">
+<div class="content container" id="content">
 	<h2 class="title">공지사항 상세보기</h2>
 	<table class="table">
 		<tbody>
@@ -50,10 +51,10 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
-		<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-light">목록으로</a>
+		<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-secondary">목록으로</a>&nbsp;&nbsp;
 		<% if(sid.equals("admin")) { %>
-		<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 수정</a>
-		<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-light">글 삭제</a>
+		<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-secondary">글 수정</a>&nbsp;&nbsp;
+		<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-secondary">글 삭제</a>
 		<% } %>
 	</div>
 </div>

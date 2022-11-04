@@ -13,10 +13,13 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+.table { text-align: center;}
+.btn-group {display:block; float: right;}
 </style>
 </head>
 <body>
 <%@ include file="../header.jsp" %>
+
 <%
 	List<Notice> notiList = (ArrayList<Notice>) request.getAttribute("notiList");
 %>
@@ -40,11 +43,13 @@
 		<% } %>	
 		</tbody>
 	</table>
-	<% if(sid.equals("admin")) { %>
 	<div class="btn-group">
-		<a href="<%=request.getContextPath() %>/notice/insertBoard.jsp" class="btn btn-light">글 등록</a>
+	<% if (sid !=null ){ %>
+		<% if(sid.equals("admin")){ %>
+		<a href="<%=request.getContextPath() %>/notice/insertBoard.jsp" class="btn btn-secondary" >글 등록</a>
+		<% } %>
+		<% } %>
 	</div>
-	<% } %>
 </div>
 <%@ include file="../footer.jsp" %>
 </body>

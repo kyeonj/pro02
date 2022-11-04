@@ -12,8 +12,20 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
-.in_container { clear:both; width:1400px; margin:0 auto;  }
-.in_container:after { content:""; display:block; clear:both; }
+.btn-group {display:block; float: right;}
+.in_container { clear:both; width:1480px; margin:0 auto; }
+.in_container:after, .in_container:before { content:""; display:block; clear:both; }
+#navbarSupportedContent { padding-top:14px; padding-bottom:14px; }
+#content { min-height:90vh; }
+#footer { margin-top:20px; padding-top:20px; border-top:3px solid #eee; }
+#footer p { font-size:0.75em; }
+#footer p.copyright { font-size:0.85em; font-weight:bold; }
+.ft_ico_lst { list-style:none; margin-block-start: 0;
+    margin-block-end: 0; margin-left:0; margin:right:0;
+    padding-inline-start:0px;  }
+.ft_ico_lst li { float:left; width:25%; }
+.ft_ico_lst li a { display:block; padding:0px; }
+.ft_ico_lst li img { display:block; width:100%; height:auto; }
 </style>
 </head>
 <body>
@@ -21,7 +33,7 @@
 <%
 	Notice vo = (Notice) request.getAttribute("notice");
 %>
-<div class="content container">
+<div class="content container" id="content">
 	<h2 class="title">공지사항 등록하기</h2>
 	<form name="frm1" id="frm1" action="<%=request.getContextPath() %>/InsertBoardProCtrl" method="post">
 	<table class="table">
@@ -41,9 +53,9 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
-			<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-light">목록으로</a>
-			<input type="submit" name="submit-btn" class="btn btn-light" value="등록">
-			<input type="reset" name="reset-btn" class="btn btn-light" value="취소">
+			<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-secondary">목록으로</a>&nbsp;&nbsp;
+			<input type="submit" name="submit-btn" class="btn btn-secondary"" value="등록">&nbsp;&nbsp;
+			<input type="reset" name="reset-btn" class="btn btn-secondary" value="취소">
 	</div>
 	</form>
 </div>

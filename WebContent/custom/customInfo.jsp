@@ -17,6 +17,7 @@
 
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+
 </style>
 </head>
 <body>
@@ -53,8 +54,8 @@
 					<td>
 						<p><%=custom.getAddress() %></p>
 						<input type="hidden" name="address" id="address">
-						<p>주소 변경시에만 입력하시기 바랍니다.</p>
-						<button id="post_btn" onclick="findAddr()" class="btn btn-light"">우편번호 검색</button>
+						<p>주소 변경시에만 입력해주세요.</p>
+						<button id="post_btn" onclick="findAddr()" class="btn btn-secondary">우편번호 검색</button>
 						<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px; margin-bottom: 20px;" placeholder="우편번호" class="form-control"><br>
 						<input type="text" name="editaddress1" id="editaddress1" placeholder="기본 주소 입력" class="form-control" /><br>
 						<input type="text" name="editaddress2" id="editaddress2" placeholder="상세 주소 입력" class="form-control" /><br>
@@ -91,8 +92,8 @@
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<input type="submit" name="submit-btn" class="btn btn-light"" value="정보수정">
-			<input type="reset" name="reset-btn" class="btn btn-light"" value="취소">
+			<input type="submit" name="submit-btn" class="btn btn-secondary" value="정보수정">&nbsp;&nbsp;
+			<input type="reset" name="reset-btn" class="btn btn-secondary" value="취소">
 		</div>
 	</form>	
 	<script>

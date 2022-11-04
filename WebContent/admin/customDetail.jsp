@@ -9,7 +9,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>회원 상세 정보</title>
+<title>회원 정보 확인 및 수정</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -18,6 +18,7 @@
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 #cusPw { width:780px; float:left; margin-right:30px; margin-left:6px; }
+.btn-group {display:block; float: right;}
 </style>
 </head>
 <body>
@@ -26,7 +27,7 @@
 <div class="row" id="content_row">
 	<%@ include file="admin_sidebar.jsp" %>
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
-		<h2 class="title">회원 상세 정보 확인 및 수정</h2>
+		<h2 class="title">회원 정보 확인 및 수정</h2>
 		<form name="frm1" id="frm1" action="<%=request.getContextPath() %>/DirectUpdateCustomCtrl" method="post">
 			<table class="table">
 				<tbody>
@@ -44,7 +45,7 @@
 				        String key = "%02x";
 						cusPw = AES256.decryptAES256(custom.getCusPw(), key); */
 						%>
-							<input type="text" name="cusPw" id="cusPw" placeholder="비밀번호 입력" value="<%=custom.getCusPw() %>" class="form-control" readonly /><button type="button" class="btn btn-primary" onclick="defaultPass()">비밀번호 초기화</button>
+							<input type="text" name="cusPw" id="cusPw" placeholder="비밀번호 입력" value="<%=custom.getCusPw() %>" class="form-control" readonly /><button type="button" class="btn btn-secondary" onclick="defaultPass()">비밀번호 초기화</button>
 							<input type="hidden" name="changePw" id="changePw" value="no">
 						</td>
 					</tr>
@@ -113,8 +114,8 @@
 				</tbody>
 			</table>
 			<div class="btn-group">
-				<input type="submit" name="submit-btn" class="btn btn-info" value="정보수정">
-				<input type="reset" name="reset-btn" class="btn btn-info" value="취소">
+				<input type="submit" name="submit-btn" class="btn btn-secondary" value="정보수정">&nbsp;&nbsp;
+				<input type="reset" name="reset-btn" class="btn btn-secondary" value="취소">
 			</div>
 		</form>	
 		<script>

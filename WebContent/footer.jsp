@@ -33,7 +33,7 @@
 			<p> 고객님은 안전거래를 위해 현금 등으로 결제시 저희 쇼핑몰 에서 가입한 구매안전 서비스를 이용하실 수 있습니다.</p>
 			<ul class="ft_ico_lst">
 				<li><a href=""><img src="./img/icon4.png" alt="개인정보방침동의"></a></li>
-				<li><a href=""><img src="./img/icon5.png" alt="공정거래위원회""></a></li>
+				<li><a href=""><img src="./img/icon5.png" alt="공정거래위원회"></a></li>
 				<li><a href=""><img src="./img/icon6.png" alt="SSL 결제보안"></a></li>
 			</ul>
 		</div>
