@@ -51,11 +51,13 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
+	<% if (sid !=null ){ %>
 		<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-secondary">목록으로</a>&nbsp;&nbsp;
 		<% if(sid.equals("admin")) { %>
 		<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-secondary">글 수정</a>&nbsp;&nbsp;
 		<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-secondary">글 삭제</a>
 		<% } %>
+		<%} %>
 	</div>
 </div>
 <%@ include file="../footer.jsp" %>

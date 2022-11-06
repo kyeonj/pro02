@@ -16,10 +16,10 @@
 	          제품
 	        </a>
 	        <div class="dropdown-menu">
-	          <a class="dropdown-item" href="#">하드케이스</a>
-	          <a class="dropdown-item" href="#">범퍼케이스</a>
-	          <a class="dropdown-item" href="#">젤리케이스</a>
-	          <a class="dropdown-item" href="#">스마트톡</a>
+	          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=1">하드케이스</a>
+	          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=2">범퍼케이스</a>
+	          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=3">젤리케이스</a>
+	          <a class="dropdown-item" href="GetProductItemListCtrl?cateNo=4">스마트톡</a>
 	          </div>
 	      </li>
 	      <li class="nav-item dropdown">
