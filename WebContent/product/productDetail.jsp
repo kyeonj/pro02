@@ -27,7 +27,7 @@
 		<tbody>
 			<tr>
 				<th>제품이미지</th>
-				<td><img src="<%=request.getContextPath() %>/upload/<%=vo.getProPic() %>" alt="<%=vo.getProName() %>"></td>
+				<td><img src="<%=request.getContextPath() %>/upload/<%=vo.getProPic2() %>" alt="<%=vo.getProName() %>"></td>
 			</tr>
 			<tr>
 				<th>제품번호</th>
@@ -57,10 +57,10 @@
 	</table>
 	<div class="btn-group">
 		<%if(sid!=null){ %>
-		<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-danger">목록으로</a>
+		<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
 		<% if(sid.equals("admin")) { %>
-		<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-primary">제품 삭제</a>
-		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-danger">제품 정보 수정</a>
+		<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 삭제</a>&nbsp;&nbsp;
+		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 정보 수정</a>
 		<% } %>
 		<%} %>
 	</div>

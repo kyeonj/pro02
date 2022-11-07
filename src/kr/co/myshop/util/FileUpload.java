@@ -29,6 +29,7 @@ public class FileUpload extends HttpServlet {
 		//String uploadPath = "D:\\kim6\\pro01\\pro02\\WebContent\\upload";
 	   String uploadPath = request.getRealPath("/upload");
 	   //D:\yeonj\pro01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\
+	   //D:\kyj\pro01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\
 	   
 	   System.out.println(uploadPath);
 	   int size = 10*1024*1024;

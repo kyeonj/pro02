@@ -31,6 +31,7 @@ public class GetBoardDetailCtrl extends HttpServlet {
 			Class.forName(DRIVER);
 			sql = "select * from notice where notino=?";
 			Connection con = DriverManager.getConnection(URL, USER, PASS);
+			con.setAutoCommit(false);		//트랜젝션 처리시에는 같이 처리될 수 있도록 오토커밋을 꺼야함.
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setInt(1, notiNo);
 			ResultSet rs = pstmt.executeQuery();

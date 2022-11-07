@@ -46,7 +46,7 @@
 	<div class="btn-group">
 	<% if (sid !=null ){ %>
 		<% if(sid.equals("admin")){ %>
-		<a href="<%=request.getContextPath() %>/notice/insertBoard.jsp" class="btn btn-secondary" >글 등록</a>
+		<a href="<%=request.getContextPath() %>/notice/insertBoard.jsp" class="btn btn-outline-info" >글 등록</a>
 		<% } %>
 		<% } %>
 	</div>

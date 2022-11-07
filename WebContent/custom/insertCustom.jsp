@@ -29,7 +29,7 @@
 					<td>
 						<div class="form-row">
 							<input type="text" name="cusId" id="cusId" placeholder="아이디 입력" class="form-control" autofocus required />
-							<input type="button" class="btn btn-secondary" value="아이디 중복 확인" onclick="idCheck()">
+							<input type="button" class="btn btn-outline-info" value="아이디 중복 확인" onclick="idCheck()">
 							<input type="hidden" name="idck" id="idck" value="no">
 						</div>
 					</td>
@@ -48,7 +48,7 @@
 				</tr>
 				<tr>
 					<th>주소</th>
-					<td><button id="post_btn" onclick="findAddr()" class="btn btn-secondary">우편번호 검색</button>
+					<td><button id="post_btn" onclick="findAddr()" class="btn btn-outline-info">우편번호 검색</button>
 					<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px; margin-bottom: 20px;" placeholder="우편번호" class="form-control"><br>
 					<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" required /><br>
 					<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control" required /><br>

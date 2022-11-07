@@ -53,9 +53,9 @@
 		</tbody>
 	</table>
 	<div class="btn-group">
-			<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-secondary">목록으로</a>&nbsp;&nbsp;
-			<input type="submit" name="submit-btn" class="btn btn-secondary"" value="등록">&nbsp;&nbsp;
-			<input type="reset" name="reset-btn" class="btn btn-secondary" value="취소">
+			<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
+			<input type="submit" name="submit-btn" class="btn btn-outline-info"" value="등록">&nbsp;&nbsp;
+			<input type="reset" name="reset-btn" class="btn btn-outline-info" value="취소">
 	</div>
 	</form>
 </div>

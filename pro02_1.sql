@@ -50,3 +50,4 @@ create table product(
 );
 commit;
 select * from product;
+alter table notice add COLUMN visited int not null;

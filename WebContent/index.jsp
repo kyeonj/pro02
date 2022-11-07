@@ -59,8 +59,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new1.jpg" class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -68,9 +67,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new2.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -78,8 +75,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new3.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -87,8 +83,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new4.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -96,8 +91,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new5.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -105,8 +99,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new6.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -114,8 +107,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new7.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>
@@ -123,8 +115,7 @@
 		<div class="card" style="width: 18rem;">
 		  <img src="./img/new8.jpg"class="card-img-top" alt="더미이미지">
 		  <div class="card-body">
-		    <h5 class="card-title">Card title</h5>
-		    <a href="#" class="btn btn-primary">상세보기</a>
+		    <a href="#" class="btn btn-outline-info">상세보기</a>
 		  </div>
 		</div>
 	</li>

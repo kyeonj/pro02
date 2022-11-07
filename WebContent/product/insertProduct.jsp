@@ -67,9 +67,9 @@
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<input type="submit" name="submit-btn" class="btn btn-secondary" value="제품 등록">&nbsp;&nbsp;
-			<input type="reset" name="reset-btn" class="btn btn-secondary" value="취소">&nbsp;&nbsp;
-			<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-secondary">목록으로</a>
+			<input type="submit" name="submit-btn" class="btn btn-outline-info" value="제품 등록">&nbsp;&nbsp;
+			<input type="reset" name="reset-btn" class="btn btn-outline-info" value="취소">&nbsp;&nbsp;
+			<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>
 		</div>
 	</form>	
 </div>
