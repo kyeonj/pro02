@@ -13,43 +13,50 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
-.table { text-align: center;}
-.btn-group {display:block; float: right;}
+#content_row { min-height:calc(100vh - 84px); }
 </style>
 </head>
 <body>
 <%@ include file="../header.jsp" %>
-
 <%
 	List<Notice> notiList = (ArrayList<Notice>) request.getAttribute("notiList");
 %>
-<div class="content container" id="content">
-	<h2 class="title">공지사항 목록</h2>
-	<table class="table">
-		<thead>
-			<tr>
-				<th>연번</th><th>제목</th><th>작성일</th>
-			</tr>
-		</thead>
-		<tbody>
-		<% for(int i=0;i<notiList.size();i++){
-			Notice vo = notiList.get(i);
-		%>
-		<tr>
-			<td><%=notiList.size()-i %></td>
-			<td><a href="<%=request.getContextPath() %>/GetBoardDetailCtrl?notiNo=<%=vo.getNotiNo() %>"><%=vo.getTitle() %></a></td>
-			<td><%=vo.getResDate() %></td>
-		</tr>
-		<% } %>	
-		</tbody>
-	</table>
-	<div class="btn-group">
-	<% if (sid !=null ){ %>
-		<% if(sid.equals("admin")){ %>
-		<a href="<%=request.getContextPath() %>/notice/insertBoard.jsp" class="btn btn-outline-info" >글 등록</a>
+<div class="container-fluid" id="content">
+	<div class="row" id="content_row">
+		<% if(sid!=null && sid.equals("admin")) { %>
+		<%@ include file="../admin/admin_sidebar.jsp" %>
 		<% } %>
+		<% if(sid!=null && sid.equals("admin")) { %>
+		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+		<% } else { %>
+		<main class="content container">
 		<% } %>
-	</div>
+			<h2 class="title">공지사항 목록</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>연번</th><th>제목</th><th>작성일</th>
+					</tr>
+				</thead>
+				<tbody>
+				<% for(int i=0;i<notiList.size();i++){
+					Notice vo = notiList.get(i);
+				%>
+				<tr>
+					<td><%=notiList.size()-i %></td>
+					<td><a href="<%=request.getContextPath() %>/GetBoardDetailCtrl?notiNo=<%=vo.getNotiNo() %>"><%=vo.getTitle() %></a></td>
+					<td><%=vo.getResDate() %></td>
+				</tr>
+				<% } %>	
+				</tbody>
+			</table>
+			<% if(sid!=null && sid.equals("admin")) { %>
+			<div class="btn-group">
+				<a href="<%=request.getContextPath() %>/notice/insertBoard.jsp" class="btn btn-outline-info">글 등록</a>
+			</div>
+			<% } %>
+		</main>
+</div>
 </div>
 <%@ include file="../footer.jsp" %>
 </body>

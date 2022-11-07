@@ -17,7 +17,8 @@
 
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
-#cusPw { width:780px; float:left; margin-right:30px; margin-left:6px; }
+#content_row { min-height:calc(100vh - 84px); }
+#cusPw { width:780px; float:left; margin-right:30px; }
 .btn-group {display:block; float: right;}
 </style>
 </head>

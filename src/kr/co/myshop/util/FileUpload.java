@@ -28,8 +28,8 @@ public class FileUpload extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//String uploadPath = "D:\\kim6\\pro01\\pro02\\WebContent\\upload";
 	   String uploadPath = request.getRealPath("/upload");
-	   //D:\yeonj\pro01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\
-	   //D:\kyj\pro01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\
+	 //D:\yeonj\pro01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\
+	 //D:\kyj\pro01\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\
 	   
 	   System.out.println(uploadPath);
 	   int size = 10*1024*1024;
@@ -88,6 +88,7 @@ public class FileUpload extends HttpServlet {
 				pstmt.setString(6, proPic);
 				pstmt.setString(7, proPic2);
 				cnt = pstmt.executeUpdate();
+				
 				if(cnt>=1){
 					response.sendRedirect("GetProductListCtrl");
 				} else {

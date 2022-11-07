@@ -20,6 +20,7 @@ create table notice(
     resDate datetime default now()
 );
 select * from notice;
+alter table notice add column visited int default 0;
 select * from custom;
 test1 1234 01011112222
 insert into notice(title,content, author) values("테스트제목1", "데스트1 내용입니다","admin");
@@ -50,4 +51,36 @@ create table product(
 );
 commit;
 select * from product;
-alter table notice add COLUMN visited int not null;
+
+create table wearing(
+	proNo int primary key,
+    amount int
+);
+select * from wearing;
+create table sales(
+	saleNo int primary key auto_increment,
+    cusId varchar(13) not null,
+    proNo int not null,
+    amount int not null,
+    saleDate datetime default now(),
+    parselNo int,
+    salePayNo int
+);
+select * from sales;
+create table payment(
+	salePayNo int primary key auto_increment,
+    payMethod varchar(20),
+    payCom varchar(50),
+    cardNum varchar(40),
+    payAmount int
+);
+select * from payment;
+create table parsel(
+	parselNo int primary key auto_increment,
+    parselAddr varchar(500),
+    cusTel varchar(14),
+    parselCompany varchar(50),
+    parselTel varchar(14),
+    parselState int default 0
+);    
+select * from parsel;

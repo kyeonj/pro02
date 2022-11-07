@@ -61,9 +61,9 @@
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<input type="submit" name="submit-btn" class="btn btn-light" value="회원가입">
-			<input type="reset" name="reset-btn" class="btn btn-light" value="취소">
-			<a href="<%=request.getContextPath() %>/custom/login.jsp" class="btn btn-light">로그인</a>
+			<input type="submit" name="submit-btn" class="btn btn-outline-info" value="회원가입">&nbsp;&nbsp;
+			<input type="reset" name="reset-btn" class="btn btn-outline-info"" value="취소">&nbsp;&nbsp;
+			<a href="<%=request.getContextPath() %>/custom/login.jsp" class="btn btn-outline-info"">로그인</a>
 		</div>
 	</form>	
 	<script>

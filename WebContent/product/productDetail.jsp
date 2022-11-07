@@ -6,7 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-<title>제품 목록</title>
+<title>제품 상세보기</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-latest.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -14,6 +14,7 @@
 
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+.table tr td img { max-width:400px; height:auto; }
 </style>
 </head>
 <body>
@@ -22,7 +23,7 @@
 	Product vo = (Product) request.getAttribute("pro");
 %>
 <div class="content container" id="content">
-	<h2 class="title">제품 목록</h2>
+	<h2 class="title">제품 상세보기</h2>
 	<table class="table">
 		<tbody>
 			<tr>
@@ -48,21 +49,32 @@
 			<tr>
 				<th>제품가격</th>
 				<td>
-					판매가격 : <strong style="color:black;"><%=vo.getProPrice() %></strong> <br>
+					판매가격 : <strong style="color:gray;"><%=vo.getProPrice() %></strong> <br>
 					세일전 가격 : (<del><%=vo.getOriPrice() %></del>) 
 				</td>
 			</tr>
-			
+			<tr>
+				<th>남은 수량</th>
+				<td>
+				<% if(vo.getAmount()!=0) { %>
+					<%=vo.getAmount() %>
+				<% } else { %>
+				<strong style="color:purple;">[품절]</strong>해당 상품의 재고가 존재하지 않습니다.
+				<% } %>
+				</td>
+			</tr>
 		</tbody>
 	</table>
 	<div class="btn-group">
-		<%if(sid!=null){ %>
 		<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
-		<% if(sid.equals("admin")) { %>
+		<% if(sid!=null && sid.equals("admin")) { %>
 		<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 삭제</a>&nbsp;&nbsp;
-		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 정보 수정</a>
+		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 정보 수정</a>&nbsp;&nbsp;
+		<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 입고</a>&nbsp;&nbsp;
 		<% } %>
-		<%} %>
+		<% if(vo.getAmount()!=0) { %>
+		<a href="<%=request.getContextPath() %>/GetSalesProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 구매</a>
+		<% } %>
 	</div>
 </div>
 <%@ include file="../footer.jsp" %>
