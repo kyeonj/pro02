@@ -14,6 +14,8 @@
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 #content_row { min-height:calc(100vh - 84px); }
+.table {text-align: center;}
+.btn-group {float: right;}
 </style>
 </head>
 <body>
@@ -56,7 +58,7 @@
 			</div>
 			<% } %>
 		</main>
-</div>
+	</div>
 </div>
 <%@ include file="../footer.jsp" %>
 </body>

@@ -15,6 +15,8 @@
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 #content_row { min-height:calc(100vh - 84px); }
+.table {text-align: center;}
+.btn-group {float: right;}
 </style>
 </head>
 <body>
@@ -62,9 +64,9 @@
 				</tbody>
 			</table>
 			<div class="btn-group">
-				<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp
+				<a href="<%=request.getContextPath() %>/GetBoardListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
 				<% if(sid!=null && sid.equals("admin")) { %>
-				<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-outline-info">글 삭제</a>&nbsp;&nbsp
+				<a href="<%=request.getContextPath() %>/DeleteBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-outline-info">글 삭제</a>&nbsp;&nbsp;
 				<a href="<%=request.getContextPath() %>/UpdateBoardCtrl?notiNo=<%=vo.getNotiNo() %>" class="btn btn-outline-info">글 수정</a>
 				<% } %>
 			</div>

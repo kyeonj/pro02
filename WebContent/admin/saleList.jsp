@@ -62,7 +62,7 @@
 				</tbody>
 			</table>
 		</main>
-</div>
+	</div>
 </div>
 <%@ include file="../footer.jsp" %>
 </body>

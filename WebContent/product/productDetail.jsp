@@ -15,6 +15,8 @@
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 .table tr td img { max-width:400px; height:auto; }
+#content_row { min-height:calc(100vh - 84px); }
+.btn-group {float: right;}
 </style>
 </head>
 <body>
@@ -22,59 +24,71 @@
 <%
 	Product vo = (Product) request.getAttribute("pro");
 %>
-<div class="content container" id="content">
-	<h2 class="title">제품 상세보기</h2>
-	<table class="table">
-		<tbody>
-			<tr>
-				<th>제품이미지</th>
-				<td><img src="<%=request.getContextPath() %>/upload/<%=vo.getProPic2() %>" alt="<%=vo.getProName() %>"></td>
-			</tr>
-			<tr>
-				<th>제품번호</th>
-				<td><%=vo.getProNo() %></td>
-			</tr>
-			<tr>
-				<th>카테고리 번호</th>
-				<td><%=vo.getCateNo() %></td>
-			</tr>
-			<tr>
-				<th>제품명</th>
-				<td><%=vo.getProName() %></td>
-			</tr>
-			<tr>
-				<th>제품 설명</th>
-				<td><%=vo.getProSpec() %></td>
-			</tr>
-			<tr>
-				<th>제품가격</th>
-				<td>
-					판매가격 : <strong style="color:gray;"><%=vo.getProPrice() %></strong> <br>
-					세일전 가격 : (<del><%=vo.getOriPrice() %></del>) 
-				</td>
-			</tr>
-			<tr>
-				<th>남은 수량</th>
-				<td>
-				<% if(vo.getAmount()!=0) { %>
-					<%=vo.getAmount() %>
-				<% } else { %>
-				<strong style="color:purple;">[품절]</strong>해당 상품의 재고가 존재하지 않습니다.
-				<% } %>
-				</td>
-			</tr>
-		</tbody>
-	</table>
-	<div class="btn-group">
-		<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
+<div class="container-fluid" id="content">
+	<div class="row" id="content_row">
 		<% if(sid!=null && sid.equals("admin")) { %>
-		<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 삭제</a>&nbsp;&nbsp;
-		<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 정보 수정</a>&nbsp;&nbsp;
-		<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 입고</a>&nbsp;&nbsp;
+		<%@ include file="../admin/admin_sidebar.jsp" %>
 		<% } %>
-		<% if(vo.getAmount()!=0) { %>
-		<a href="<%=request.getContextPath() %>/GetSalesProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 구매</a>
+		<% if(sid!=null && sid.equals("admin")) { %>
+		<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+		<% } else { %>
+		<main class="content container">
 		<% } %>
+			<h2 class="title">제품 상세보기</h2>
+			<table class="table">
+				<tbody>
+					<tr>
+						<th>제품이미지</th>
+						<td><img src="<%=request.getContextPath() %>/upload/<%=vo.getProPic2() %>" alt="<%=vo.getProName() %>"></td>
+					</tr>
+					<tr>
+						<th>제품번호</th>
+						<td><%=vo.getProNo() %></td>
+					</tr>
+					<tr>
+						<th>카테고리 번호</th>
+						<td><%=vo.getCateNo() %></td>
+					</tr>
+					<tr>
+						<th>제품명</th>
+						<td><%=vo.getProName() %></td>
+					</tr>
+					<tr>
+						<th>제품 설명</th>
+						<td><%=vo.getProSpec() %></td>
+					</tr>
+					<tr>
+						<th>제품가격</th>
+						<td>
+							판매가격 : <strong style="color:green;"><%=vo.getProPrice() %></strong> <br>
+							세일전 가격 : (<del><%=vo.getOriPrice() %></del>) 
+						</td>
+					</tr>
+					<tr>
+						<th>남은 수량</th>
+						<td>
+						<% if(vo.getAmount()!=0) { %>
+							<%=vo.getAmount() %>
+						<% } else { %>
+						<strong style="color:blue;">[품절]</strong>해당 상품의 재고가 존재하지 않습니다.
+						<% } %>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="btn-group">
+				<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info"">목록으로</a>&nbsp;&nbsp;
+				<% if(sid.equals("admin")) { %>
+				<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 정보 수정</a>&nbsp;&nbsp;
+				<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 입고</a>&nbsp;&nbsp;
+				<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 삭제</a>&nbsp;&nbsp;
+				<% } %>
+				<% if(vo.getAmount()!=0) { %>
+				<a href="<%=request.getContextPath() %>/GetSalesProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 구매</a>&nbsp;&nbsp;
+				<a href="<%=request.getContextPath() %>/GetMemberCartListCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">장바구니 넣기</a>
+				<% } %>
+			</div>
+		</main>
 	</div>
 </div>
 <%@ include file="../footer.jsp" %>

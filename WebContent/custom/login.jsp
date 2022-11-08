@@ -14,6 +14,7 @@
 
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+ .btn-group {float: right;}
 </style>
 </head>
 <body>
