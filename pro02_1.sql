@@ -22,7 +22,6 @@ create table notice(
 select * from notice;
 alter table notice add column visited int default 0;
 select * from custom;
-test1 1234 01011112222
 insert into notice(title,content, author) values("테스트제목1", "데스트1 내용입니다","admin");
 insert into notice(title,content, author) values("테스트제목2", "데스트2 내용입니다","admin");
 insert into notice(title,content, author) values("테스트제목3", "데스트3 내용입니다","admin");
@@ -92,6 +91,7 @@ create table cart(
     cusId varchar(13)
 );
 select * from cart;
+drop table cart;
 delete from cart where cartNo=4;
 create table qnaa(
     no int primary key auto_increment,
@@ -115,3 +115,12 @@ update qnaa set parno=2 where no=2;
 commit;
 select no from qnaa order by resdate desc limit 1;
 delete from qnaa where no >= 6;
+
+update product set proNo=2 where proNo=3;
+select * from product;
+update wearing set proNo=2 where proNo=3;
+select * from wearing;
+select * from board;
+select * from product order by regdate desc limit 4;
+alter table product add column scnt int default 0; 
+alter table product add column regdate datetime default now();

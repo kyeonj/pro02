@@ -14,6 +14,7 @@
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 #content_row { min-height:calc(100vh - 84px); }
+ .btn-group {float: right;}
 </style>
 </head>
 <body>
@@ -77,9 +78,9 @@
 					</tbody>
 				</table>
 				<div class="btn-group">
+					<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
 					<input type="submit" name="submit-btn" class="btn btn-outline-info" value="제품 등록">&nbsp;&nbsp;
-					<input type="reset" name="reset-btn" class="btn btn-outline-info" value="취소">&nbsp;&nbsp;
-					<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>
+					<input type="reset" name="reset-btn" class="btn btn-outline-info" value="취소">
 				</div>
 			</form>	
 		</main>

@@ -28,6 +28,11 @@
 <%@ include file="../header.jsp" %>
 <%
 	List<Product> proList = (ArrayList<Product>) request.getAttribute("proList");
+	if(sid!=null) {
+		sid = sid;
+	} else {
+		sid = "guest";
+	}
 %>
 <div class="container-fluid" id="content">
 	<div class="row" id="content_row">

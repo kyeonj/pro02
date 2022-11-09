@@ -23,6 +23,11 @@
 <%@ include file="../header.jsp" %>
 <%
 	Product vo = (Product) request.getAttribute("pro");
+	if(sid!=null) {
+		sid = sid;
+	} else {
+		sid = "guest";
+	}
 %>
 <div class="container-fluid" id="content">
 	<div class="row" id="content_row">
@@ -83,9 +88,9 @@
 				<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 입고</a>&nbsp;&nbsp;
 				<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 삭제</a>&nbsp;&nbsp;
 				<% } %>
-				<% if(vo.getAmount()!=0) { %>
+				<% if(vo.getAmount()!=0 && sid!="guest") { %>
 				<a href="<%=request.getContextPath() %>/GetSalesProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 구매</a>&nbsp;&nbsp;
-				<a href="<%=request.getContextPath() %>/GetMemberCartListCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">장바구니 넣기</a>
+				<a href="<%=request.getContextPath() %>/InsertCartCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">장바구니 넣기</a>
 				<% } %>
 			</div>
 		</main>

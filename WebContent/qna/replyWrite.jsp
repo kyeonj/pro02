@@ -13,6 +13,7 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+.btn-group {float: right;}
 </style>
 </head>
 <body>

@@ -48,7 +48,7 @@ public class UpdateParselProCtrl extends HttpServlet {
 			cnt = pstmt.executeUpdate();
 			
 			if(cnt>=1){
-				response.sendRedirect(request.getContextPath()+"/admin/index.jsp");
+				response.sendRedirect(request.getContextPath()+"/GetAdminParselListCtrl");
 			} else {
 				response.sendRedirect(request.getContextPath()+"/UpdateParselCtrl?parselNo="+parselNo);
 			}

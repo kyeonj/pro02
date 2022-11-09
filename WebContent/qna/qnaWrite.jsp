@@ -14,6 +14,7 @@
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
 #content_row { min-height:calc(100vh - 84px); }
+.btn-group {float: right;}
 </style>
 </head>
 <body>
@@ -61,8 +62,8 @@
 					</tbody>
 				</table>
 				<div class="btn-group">
-					<button type="submit" class="btn btn-outline-info">글 쓰기</button>&nbsp;&nbsp;
-					<a href="<%=request.getContextPath() %>/GetQnaListCtrl.do" class="btn btn-outline-info">목록으로</a>
+					<a href="<%=request.getContextPath() %>/GetQnaListCtrl.do" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
+					<button type="submit" class="btn btn-outline-info">글 쓰기</button>
 				</div>
 			</form>
 		</main>

@@ -13,7 +13,6 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
-
 </style>
 </head>
 <body>
@@ -31,7 +30,7 @@
 		<% } else { %>
 		<main class="content container">
 		<% } %>
-			<h2 class="title">장바구니</h2>
+			<h2 class="title">장바구니 목록</h2>
 			<table class="table">
 				<thead>
 					<tr>

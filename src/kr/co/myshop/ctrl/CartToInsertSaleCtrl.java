@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 public class CartToInsertSaleCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private final static String DRIVER = "com.mysql.cj.jdbc.Driver";
-	private final static String URL = "jdbc:mysql://localhost:3306/myshop1serverTimezone=Asia/Seoul";
+	private final static String URL = "jdbc:mysql://localhost:3306/myshop?serverTimezone=Asia/Seoul";
 	private final static String USER = "root";
 	private final static String PASS = "a1234";
 	String sql = "";
@@ -108,7 +108,7 @@ public class CartToInsertSaleCtrl extends HttpServlet {
 			con.setAutoCommit(true);
 			
 			if(cnt>=1){
-				response.sendRedirect("GetProductItemListCtrl?cateNo=3");
+				response.sendRedirect("GetMemberCartListCtrl");
 			} else {
 				response.sendRedirect("CartToSaleCtrl?proNo="+proNo+"&cartNo="+cartNo);
 			}

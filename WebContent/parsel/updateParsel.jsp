@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="common.css">
 <style>
 .title { padding-top:36px; padding-bottom:20px; }
+.btn-group {display:block; float: right;}
+#content_row { min-height:calc(100vh - 84px); }
 </style>
 </head>
 <body>
@@ -117,9 +119,9 @@
 					</tbody>
 				</table>
 				<div class="btn-group">
+					<a href="<%=request.getContextPath() %>/GetMemberSalesInfoCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
 					<input type="submit" name="submit-btn" class="btn btn-outline-info" value="배송 정보 변경">&nbsp;&nbsp;
-					<input type="reset" name="reset-btn" class="btn btn-outline-info" value="취소">&nbsp;&nbsp;
-					<a href="<%=request.getContextPath() %>/GetMemberSalesInfoCtrl" class="btn btn-outline-info"">목록으로</a>
+					<input type="reset" name="reset-btn" class="btn btn-outline-info" value="취소">
 				</div>
 			</form>
 			<script>
