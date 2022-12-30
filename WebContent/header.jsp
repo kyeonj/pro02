@@ -29,7 +29,6 @@
 	        <div class="dropdown-menu">
 	          <a class="dropdown-item" href="<%=request.getContextPath() %>/GetBoardListCtrl">Notice</a>
 	          <a class="dropdown-item" href="<%=request.getContextPath() %>/GetQnaListCtrl.do">Q&A</a>
-	          <a class="dropdown-item" href="#">REVIEW</a>
 	        </div>
 	      </li>
 	    </ul>
