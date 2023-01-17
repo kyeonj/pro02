@@ -82,7 +82,7 @@
 				</tbody>
 			</table>
 			<div class="btn-group">
-				<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info"">목록으로</a>&nbsp;&nbsp;
+				<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-outline-info">목록으로</a>&nbsp;&nbsp;
 				<% if(sid.equals("admin")) { %>
 				<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 정보 수정</a>&nbsp;&nbsp;
 				<a href="<%=request.getContextPath() %>/GetProductWearingCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-outline-info">제품 입고</a>&nbsp;&nbsp;

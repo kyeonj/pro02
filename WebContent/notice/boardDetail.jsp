@@ -34,7 +34,7 @@
 		<% } else { %>
 		<main class="content container">
 		<% } %>
-			<h2 class="title">공지사항 목록</h2>
+			<h2 class="title">공지사항 상세보기</h2>
 			<table class="table">
 				<tbody>
 					<tr>
