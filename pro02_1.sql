@@ -61,7 +61,7 @@ create table product(
 commit;
 select * from product;
 
-/*재고 테이블*/
+/*판매내역 테이블*/
 create table wearing(
 	proNo int primary key,
     amount int
